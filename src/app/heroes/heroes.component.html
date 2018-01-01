@@ -1,0 +1,15 @@
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+      (click)="onSelect(hero)"
+      [class.selected]="hero == selectedHero">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<!-- [hero]="selectedHero --- Angular property binding -->
+<!-- hero-detail.component.html中的hero来自于heroes.component.ts中的selectedHero变量赋值，
+     [hero]中的hero在子模块中使用
+     -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
