@@ -1,5 +1,12 @@
 <h1>{{title}}</h1>
-<!-- 引入heroes模块页面 -->
-<app-heroes></app-heroes>
+<!-- 引入heroes模块页面 deleted in 'Routing' section -->
+<!--<app-heroes></app-heroes>-->
+
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<!-- 输出routing导航结果的标签-->
+<router-outlet></router-outlet>
 
 <app-messages></app-messages>
